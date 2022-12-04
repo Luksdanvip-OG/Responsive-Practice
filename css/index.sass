@@ -14,6 +14,7 @@ header
     width: 100vw
     
 //ESTILO BASE
+    //Menú de navegación.
 nav
     padding: 15px
     display: flex
@@ -45,13 +46,13 @@ nav
             cursor: pointer
             background-color: grey
             border-radius: 10px
-    ul.mobile-menu
+    ul.menu-movil
         display: none
-
+//Contenido principal.
 main
     margin-top: 25px
     width: 100vw
-    
+    //Categorias con scroll horizontal.
 div.scroll-categorias
         
         width: 100vw
@@ -91,7 +92,7 @@ div.categoria-info-content
     img
         width: 100%
         height: 70%
-        
+//Grid de los productos.        
 div.productos-descripcion
     width: 60%
     display: grid
@@ -123,14 +124,36 @@ div.prod-2
 
 div.prod-3
     grid: 3
-    
-    
+     
 div.producto
     img
         background: #f8f8ff
     div
         background: white
 
+//Tabla de descripciones.
+div.tabla-descripcion
+    width: 70%
+    margin: auto
+    display: flex
+    align-items: center
+    justify-content: center
+    table
+        border-collapse: collapse
+        tr
+            border-bottom: 2px grey solid
+        td
+            text-align: center
+            padding: 25px
+            
+            
+    tr.id-movil
+            display: none   
+    img.headphones
+        width: 150px
+    td.id-pc
+        text-align: left
+    
 
 //MODIFICACION DE CAPAS EN MOVILES 
 @media only screen and (max-width: screenSizes.$screen-mobile-width)
@@ -140,7 +163,7 @@ div.producto
         ul
             display: none
         
-        ul.mobile-menu
+        ul.menu-movil
             display: block
 
         ul.iconos
@@ -171,9 +194,17 @@ div.producto
     div.prod-3
         grid-row: 4
         grid-column: 1
-
     //modificaciones tabla de especificaciones.
-
+    div.tabla-descripcion
+        
+        tr.id-movil
+            display: table-row
+        table
+            td.id-pc
+                display: none
+        img.headphones
+            width: 100px
+    
     
 
             

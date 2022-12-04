@@ -53,7 +53,7 @@ nav ul.iconos li img:hover {
   background-color: grey;
   border-radius: 10px;
 }
-nav ul.mobile-menu {
+nav ul.menu-movil {
   display: none;
 }
 
@@ -144,6 +144,33 @@ div.producto div {
   background: white;
 }
 
+div.tabla-descripcion {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.tabla-descripcion table {
+  border-collapse: collapse;
+}
+div.tabla-descripcion table tr {
+  border-bottom: 2px grey solid;
+}
+div.tabla-descripcion table td {
+  text-align: center;
+  padding: 25px;
+}
+div.tabla-descripcion tr.id-movil {
+  display: none;
+}
+div.tabla-descripcion img.headphones {
+  width: 150px;
+}
+div.tabla-descripcion td.id-pc {
+  text-align: left;
+}
+
 @media only screen and (max-width: 1024px) {
   nav {
     justify-content: space-between;
@@ -151,7 +178,7 @@ div.producto div {
   nav ul {
     display: none;
   }
-  nav ul.mobile-menu {
+  nav ul.menu-movil {
     display: block;
   }
   nav ul.iconos {
@@ -186,5 +213,14 @@ div.producto div {
   div.prod-3 {
     grid-row: 4;
     grid-column: 1;
+  }
+  div.tabla-descripcion tr.id-movil {
+    display: table-row;
+  }
+  div.tabla-descripcion table td.id-pc {
+    display: none;
+  }
+  div.tabla-descripcion img.headphones {
+    width: 100px;
   }
 }/*# sourceMappingURL=index.css.map */
