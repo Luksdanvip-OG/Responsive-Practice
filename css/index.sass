@@ -1,0 +1,118 @@
+@use 'screenSizes'
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+
+*
+    margin: 0
+    padding: 0
+body
+    font-family: "Montserrat", sans-serif
+
+img
+    box-sizing: border-box
+    max-width: 100%
+header
+    width: 100vw
+    
+//ESTILO BASE
+nav
+    padding: 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px
+    ul li
+        display: inline
+        justify-content: start
+        padding: 10px
+        font-weight: bold
+        text-decoration: none
+        font-size: 14px
+        background-image: linear-gradient(currentColor, currentColor)
+        background-position: 0% 100%
+        background-repeat: no-repeat
+        background-size: 0% 2px
+        transition: background-size .3s
+        &:hover
+            background-size: 100% 2px
+            cursor: pointer
+    ul.icons li
+        transition: none
+        &:hover
+            background-image: none
+    ul.icons li img
+        &:hover
+            cursor: pointer
+            background-color: grey
+            border-radius: 10px
+    ul.mobile-menu
+        display: none
+
+main
+    margin-top: 25px
+    width: 100vw
+    
+div.scroll-categorias
+        border: 1px black solid
+        width: 100vw
+        display: inline-flex
+        overflow-x: scroll
+        align-items: center
+        
+    
+    
+div.categoria-info
+    width: 100%
+    height: 100%
+    display: block
+    padding: 10px
+    
+
+div.categoria-info-content
+    width: 300px
+    height: 300px
+    
+    display: flex
+    flex-direction: column
+    text-align: center
+    border: 1px black solid
+    span
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 30%
+        &:active
+            background-color: black
+            color: white
+        
+    img
+        width: 100%
+        height: 70%
+        
+            
+            
+            
+
+
+
+//MODIFICACION DE CAPAS EN MOVILES 
+@media only screen and (max-width: screenSizes.$screen-mobile-width)
+    nav
+        justify-content: space-between
+        ul
+            display: none
+        
+        ul.mobile-menu
+            display: block
+
+        ul.icons
+            display: block
+
+        ul.icons li
+            display: none
+
+        ul.icons li.cart
+            display: block  
+
+            
